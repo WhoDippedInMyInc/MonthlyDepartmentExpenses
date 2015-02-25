@@ -32,7 +32,7 @@ public class DepOneExpText {
 		Manager managerA = new Manager();
 		managerA.add(managerB);
 		
-		assertEquals(2100.0, managerA.getTotalExpenses(), 0.001);
+		assertEquals(2100.0, managerA.getExpenses(), 0.0);
 	}
 
 }
