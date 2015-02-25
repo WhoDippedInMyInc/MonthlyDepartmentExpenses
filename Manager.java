@@ -20,33 +20,34 @@ public class Manager extends Employee {
 	private ArrayList<Employee> employeeList = new ArrayList<>();
 	
 	/**
-	 * Manager() creates a Manager, who is paid $300.0 a month.
+	 * Ceates a Manager, who is paid $300.0 a month.
 	 */
 	public Manager() {
-		expenses = 300.0;
+		super(300.0);
 	}
 	
 	/**
-	 * Add() adds employees to a list.
+	 * Adds an employees to a list of employees being supervised.
 	 * @param employee
 	 */
-	public void add(Employee employee) {
+	public void supervise(Employee employee) {
 	 	employeeList.add(employee);
-    }
+        }
 	
 	/**
-	 * getTotalExpenses() adds the values in employeeList,
-	 * calculating a departments total monthly expenses.
-	 * @return the value of totalExpenses.
+	 * Calculates the expenses of this employee as well as the expenses of anyone reporting to him/her.
+	 * 
+	 * @return the expenses of this employee's.
 	 */
-	public double getTotalExpenses() {
-    	double totalExpenses = 0.00;
-
-    	for(Employee employee : employeeList) {
-    		totalExpenses += employee.getExpenses();
-		}
-		return totalExpenses;
-    }
+	@Override
+	public double getExpenses() {
+		int expenses = super.getExpenses();
+		
+		for(Employee employee : employeeList)
+		       expenses += employee.getExpenses();
+		       
+		return expenses;
+	}
 }
 
 
