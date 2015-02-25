@@ -13,6 +13,6 @@ public class QATester extends Employee {
 	 * QATester() creates a QA Tester, who is paid $500.0 a month.
 	 */
 	public QATester() {
-		expenses = 500.0;
+		super(500.0);
 	}
 }
