@@ -7,7 +7,7 @@ package monDepExpensesApp;
  * 
  * @author Reed
  */
-public class Employee {
+public abstract class Employee {
 	private double expenses;
 	
 	public Employee(double expenses) {
