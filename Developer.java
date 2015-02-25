@@ -13,6 +13,6 @@ public class Developer extends Employee {
 	 * Developer() creates a Developer, who is paid $1000.0 a month.
 	 */
 	public Developer() {
-		expenses = 1000.0;
+		super(1000.0);
 	}
 }
