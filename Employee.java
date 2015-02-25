@@ -8,8 +8,11 @@ package monDepExpensesApp;
  * @author Reed
  */
 public class Employee {
-	protected double expenses;
+	private double expenses;
 	
+	public Employee(double expenses) {
+		this.expenses = expenses;
+	}
 	/**
 	 * getExpenses() returns the monthly allocation amount of a Manager, Developer, or QATester object.
 	 * @return a double values representing what the specified Employee is paid each month.
